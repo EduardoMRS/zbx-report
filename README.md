@@ -12,6 +12,7 @@ Esta é uma aplicação que automatiza a geração e o envio de relatórios de m
 ![Interface Responsiva](https://img.shields.io/badge/Responsivo-Sim-green) 
 ![API Zabbix](https://img.shields.io/badge/API%20Zabbix-v7-blue)
 
+
 ## ✨ Funcionalidades Principais
 
 - **Relatórios em PDF Automatizados**
@@ -29,6 +30,9 @@ Esta é uma aplicação que automatiza a geração e o envio de relatórios de m
   - Envio agendado (cron)
   - Logs de erro e notificações
   - API para integrações externas
+
+## 🌐 Pagina do Projeto
+[Clique para visitar](https://deveduardomrs.pro/projetos/zbx-report/)
 
 ## 📚 Documentação
 
