@@ -1,0 +1,5 @@
+/vendor
+update/update.zip
+/update
+signature/cert.p12
+signature/cert.pem

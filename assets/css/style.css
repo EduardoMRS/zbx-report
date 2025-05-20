@@ -1,0 +1,327 @@
+@import url(./table.css);
+@import url(../framework/bootstrap-5.3.3/css/bootstrap.min.css);
+@import url(../framework/bootstrap-icons-1.11.3/font/bootstrap-icons.css);
+
+:root {
+    --primary-color: #007bff;
+    --primary-hover: #0056b3;
+    --background: #0e0e0e;
+    --background-card: #2d2d2d;
+    --color-highlight: #57c3ef;
+    --color-text: #fdfeff;
+    --text-light: #c5c5c5;
+    --text-dark: #333;
+    --white: #ffffff;
+    --error-color: #dc3545;
+    --success-color: #28a745;
+    --info-color: #17a2b8;
+}
+
+
+.loader {
+    width: 40px;
+    aspect-ratio: 1;
+    --c: linear-gradient(var(--color-highlight) 0 0);
+    --r1: radial-gradient(farthest-side at bottom, var(--color-highlight) 93%, #0000);
+    --r2: radial-gradient(farthest-side at top, var(--color-highlight) 93%, #0000);
+    background:
+        var(--c), var(--r1), var(--r2),
+        var(--c), var(--r1), var(--r2),
+        var(--c), var(--r1), var(--r2);
+    background-repeat: no-repeat;
+    animation: l2 1s infinite alternate;
+}
+
+@keyframes l2 {
+
+    0%,
+    25% {
+        background-size: 8px 0, 8px 4px, 8px 4px, 8px 0, 8px 4px, 8px 4px, 8px 0, 8px 4px, 8px 4px;
+        background-position: 0 50%, 0 calc(50% - 2px), 0 calc(50% + 2px), 50% 50%, 50% calc(50% - 2px), 50% calc(50% + 2px), 100% 50%, 100% calc(50% - 2px), 100% calc(50% + 2px);
+    }
+
+    50% {
+        background-size: 8px 100%, 8px 4px, 8px 4px, 8px 0, 8px 4px, 8px 4px, 8px 0, 8px 4px, 8px 4px;
+        background-position: 0 50%, 0 calc(0% - 2px), 0 calc(100% + 2px), 50% 50%, 50% calc(50% - 2px), 50% calc(50% + 2px), 100% 50%, 100% calc(50% - 2px), 100% calc(50% + 2px);
+    }
+
+    75% {
+        background-size: 8px 100%, 8px 4px, 8px 4px, 8px 100%, 8px 4px, 8px 4px, 8px 0, 8px 4px, 8px 4px;
+        background-position: 0 50%, 0 calc(0% - 2px), 0 calc(100% + 2px), 50% 50%, 50% calc(0% - 2px), 50% calc(100% + 2px), 100% 50%, 100% calc(50% - 2px), 100% calc(50% + 2px);
+    }
+
+    95%,
+    100% {
+        background-size: 8px 100%, 8px 4px, 8px 4px, 8px 100%, 8px 4px, 8px 4px, 8px 100%, 8px 4px, 8px 4px;
+        background-position: 0 50%, 0 calc(0% - 2px), 0 calc(100% + 2px), 50% 50%, 50% calc(0% - 2px), 50% calc(100% + 2px), 100% 50%, 100% calc(0% - 2px), 100% calc(100% + 2px);
+    }
+}
+
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding-top: 4rem;
+    background-color: var(--background) !important;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px !important;
+    margin: 0 auto;
+}
+
+h1,
+h2 {
+    color: var(--color-highlight);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.card {
+    background: var(--background-card) !important;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.hide {
+    display: none;
+}
+
+.fixed.top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.nav-overlay {
+    background-color: var(--primary-color);
+    padding: 0;
+}
+
+.nav {
+    padding: 10px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1a1a1a;
+}
+
+.card {
+
+    & h3,
+    h4,
+    h5,
+    h6,
+    p,
+    label,
+    small,
+    span {
+        color: var(--color-text);
+    }
+
+    & h1,
+    h2 {
+        font-weight: bold;
+        color: var(--color-highlight);
+    }
+}
+
+
+.menu-toggle {
+    background-color: #4f4f4f;
+    color: var(--color-text);
+    border: none;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.text-muted {
+    color: var(--color-text) !important;
+}
+
+
+.custom-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 90%);
+    display: none;
+    z-index: 1000;
+}
+
+.custom-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    max-width: 800px;
+    height: 90%;
+    width: 90%;
+    z-index: 1001;
+    flex-direction: column;
+}
+
+.custom-modal .close-modal {
+    border: none;
+    border-radius: 8px;
+    background-color: #8080801c;
+    box-shadow: 0px 1px 3px #0000003b;
+}
+
+.custom-modal .modal-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #414141;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    flex: 1;
+}
+
+
+.custom-modal .modal-header,
+.custom-modal .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+
+    & h2 {
+        margin: 0;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        color: var(--color-text);
+    }
+}
+
+.custom-modal .modal-header {
+    margin-bottom: 1rem;
+}
+
+.custom-modal .modal-content,
+.custom-modal {
+    background-color: #292929;
+}
+
+.input-group {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+.input-group> :first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+.input-group> :last-child {
+    border-radius: 0 5px 5px 0;
+}
+
+.input-group>input,
+.input-group>span,
+.input-group>select {
+    padding: 10px;
+    border: 1px solid #ebebeb;
+    font-size: 1rem;
+    outline: none;
+    white-space: nowrap;
+}
+
+.input-group select {
+    padding: 13px;
+    width: auto !important;
+}
+
+.input-group input {
+    flex: 1;
+    transition: border-color 0.3s ease;
+    width: 100%;
+    height: auto;
+}
+
+.input-group input:focus {
+    border-color: var(--color-button-primary);
+}
+
+.input-group span {
+    color: var(--color-text);
+    width: fit-content;
+}
+
+.form-group label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+.form-group label span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+
+    & label {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+
+
+button:focus-visible {
+    outline: none;
+}
+
+
+.modal-dialog .modal-content {
+    background-color: #1c1c1c;
+}
+
+.modal-dialog .modal-footer {
+    justify-content: center;
+    gap: 4px;
+}
+
+.modal-dialog .modal-footer button {
+    max-width: 290px;
+    width: 100%;
+}
+
+.search-bar {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.search-bar button {
+    height: 100%;
+}

@@ -1,0 +1,126 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 6rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 0 !important;
+}
+
+.card-header {
+    background-color: #333;
+    color: #ffffff;
+    border-bottom: 1px solid #444;
+    border-radius: 10px 10px 0 0;
+    padding: 0;
+
+    & .active {
+        width: 100%;
+    }
+
+    & h3 {
+        padding: 4px;
+        margin: 0;
+    }
+}
+
+.card-inputs {
+    max-height: 346px;
+    overflow-y: auto;
+    scrollbar-color: #30ad3d #59595938;
+    scrollbar-width: thin;
+    padding: 6px;
+    overflow-x: hidden;
+}
+
+.form-control {
+    background-color: #333;
+    color: #ffffff;
+    border: 1px solid #444;
+}
+
+.form-control:focus {
+    background-color: #444;
+    color: #ffffff;
+    border-color: #555;
+    box-shadow: none;
+}
+
+.btn-primary {
+    background-color: #4CAF50 !important;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #45a049 !important;
+}
+
+.btn-link {
+    color: #4CAF50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.btn-link:hover {
+    color: #45a049;
+}
+
+.alert-danger {
+    background-color: #ff6b6b;
+    color: #ffffff;
+    border: none;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+    font-size: 14px;
+    padding-bottom: 1rem;
+}
+
+label {
+    color: #e7e7e7;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+}
+
+.g-recaptcha {
+    margin: 10px 0;
+    display: flex;
+    scale: 0.8;
+    justify-content: center;
+    align-items: center;
+}
+
+.g-recaptcha div {
+    margin: 0 auto;
+    height: auto !important;
+    width: auto !important;
+}
+
+.page-content {
+    max-width: 650px;
+}

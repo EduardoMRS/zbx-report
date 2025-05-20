@@ -1,0 +1,9 @@
+<FilesMatch "(?<!olt-monitoring)\.json$">
+    ErrorDocument 403 /erros/403.html
+    Require all denied
+</FilesMatch>
+
+# Páginas de erro
+ErrorDocument 404 /erros/404.html
+ErrorDocument 403 /erros/403.html
+ErrorDocument 500 /erros/500.html
