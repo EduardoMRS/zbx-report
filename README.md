@@ -26,12 +26,11 @@ Sistema automatizado de relatórios para dados do Zabbix, com geração de PDF, 
 ## 📚 Documentação
 
 - [Documentação da API](guide_api.md) - Referência completa dos endpoints
-- [Tratamento de Erros](docs/errors.md) - Solução de problemas comuns
 
 ## 🚀 Instalação Rápida (Linux/Ubuntu)
 
 ```bash
-wget https://raw.githubusercontent.com/ThomasJPF/Envia-Relatorio-Zabbix-UNI/main/start.sh && \
+wget https://raw.githubusercontent.com/EduardoMRS/zbx-report/refs/heads/main/setup/start.sh && \
 chmod +x start.sh && \
 sudo ./start.sh
 ```
@@ -43,10 +42,15 @@ sudo ./start.sh
 - (Opcional) Certificado digital para assinatura
 
 ## 📦 Dependências
-- text
-- jpgraph/jpgraph     - Geração de gráficos
-- setasign/fpdf       - Criação de PDF
-- setasign/fpdi       - Manipulação de templates PDF
+|Composer|Função|
+|--|--|
+|jpgraph/jpgraph|Geração de gráficos|
+|setasign/fpdf|Criação de PDF|
+|setasign/fpdi|Manipulação de templates PDF|
+|setasign/fpdi-fpdf|Manipulação de gráficos e PDF|
+|tecnickcom/tcpdf|Para adição de assinatura .P12 em PDF|
+|phpmailer/phpmailer|Para envio de E-Mails|
+|phpoffice/phpspreadsheet|Para Geração de Planilhas|
 
 ## 🤝 Como Contribuir
 Contribuições são bem-vindas! Para mudanças grandes, abra uma issue primeiro.
