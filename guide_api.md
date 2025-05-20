@@ -1,15 +1,6 @@
 # Project: ZABBIX Report - API Documentation
 _**(Sistema de Relatórios Automatizados Integrado ao Zabbix)**_
 
-## **🔍 Visão Geral**
-
-A **ZABBIX Report** é uma aplicação que automatiza a geração e o envio de relatórios de monitoramento baseados em dados do **Zabbix**, oferecendo:  
-✅ **Relatórios mensais** automatizados por e-mail.  
-✅ **Assinatura digital** de documentos (certificado `.p12`).  
-✅ **Gestão de clientes dedicados** com vinculação a hosts do Zabbix.  
-✅ **API RESTful** para integração com outras ferramentas.
-
----
 
 ## **📂 Seções da API**
 
