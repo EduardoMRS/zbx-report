@@ -1,6 +1,6 @@
 # ZABBIX Report
 
-Sistema automatizado de relatórios com dados do Zabbix, com geração de PDF, envio por e-mail e assinatura digital.
+Sistema automatizado de relatórios usando dados do Zabbix, com geração de PDF, envio de relatórios por e-mail e assinatura digital.
 ## **🔍 Visão Geral**
 
 Esta é uma aplicação que automatiza a geração e o envio de relatórios de monitoramento baseados em dados do **Zabbix**, oferecendo:  
